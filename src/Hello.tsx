@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
-import './Hello.pcss';
+import { Tooltip, TooltipContent, TooltipTrigger } from './Tooltip';
 
 type Props = {};
 
-export const Hello: FC<Props> = ({}) => {
+export const Hello: FC<Props> = ({ }) => {
   return <div className={'Hello'}>
-    <h1>Hello React</h1>
+    <Tooltip>
+      <TooltipTrigger>hover me</TooltipTrigger>
+      <TooltipContent>tooltip</TooltipContent>
+    </Tooltip>
   </div>;
 }
